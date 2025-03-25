@@ -1,7 +1,7 @@
 import Image from "next/image"
 import logo from "/public/logo.svg"
 import { Container,LogoWrapper } from "./styles"
-import Cart from "../Cart"
+import CheckOut from "../Checkout"
 
 export default function Header(){
     return(
@@ -9,7 +9,7 @@ export default function Header(){
             <LogoWrapper>
                 <Image src={logo} alt={"logo"}/>
             </LogoWrapper>
-            <Cart/>
+           <CheckOut/>
         </Container>
     )
 }

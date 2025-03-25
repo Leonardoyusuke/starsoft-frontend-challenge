@@ -2,20 +2,17 @@
 
 import styled from "styled-components"
 
-export const Container = styled.div`
+export const BagWrapped = styled.div`
 position: absolute;
 top: 23.5px;
 width: 74px;
 height: 53px;
-right: 117px;
+right: 63px;
 gap: 10px;
-padding:10px;
-`
-
-export const BagWrapped = styled.div`
 width: 54px;
 height: 33px;
 display: flex;
+padding:10px;
 align-items: flex-end;
 gap: 9px;
 img{
