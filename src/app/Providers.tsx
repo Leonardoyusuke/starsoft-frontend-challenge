@@ -2,6 +2,7 @@
 import { useRef } from 'react'
 import { Provider } from 'react-redux'
 import { makeStore, AppStore } from '../lib/store'
+import StyledComponentsRegistry from '@/lib/registry'
 
 export default function Providers({
   children,
@@ -13,5 +14,10 @@ export default function Providers({
     storeRef.current = makeStore()
   }
 
-  return <Provider store={storeRef.current}>{children}</Provider>
+  return (
+    <Provider store={storeRef.current}>
+      <StyledComponentsRegistry>
+        {children}
+      </StyledComponentsRegistry>
+    </Provider>)
 }
