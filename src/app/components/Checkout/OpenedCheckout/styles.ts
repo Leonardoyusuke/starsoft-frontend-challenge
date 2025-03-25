@@ -10,6 +10,7 @@ width: 679px;
 height: 1117px;
 border-radius: 5px;
 background-color: gray;
+z-index: 1;
 `
 
 export const Top = styled.div`
@@ -35,5 +36,5 @@ text{
     color: #FFFFFF;
 }
 `
-export const Itens = styled.div`
+export const Products = styled.div`
 `

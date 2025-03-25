@@ -1,4 +1,4 @@
-import { Container, Top, Itens } from "./styles";
+import { Container, Top, Products } from "./styles";
 import Image from "next/image";
 import backArrow from "/public/BackArrow.svg"
 import { useDispatch } from 'react-redux';
@@ -14,9 +14,9 @@ export default function OpenedCheckout() {
                 <Image src={backArrow} alt={"BackArrow"} onClick={() => dispatch(closeCheckout())} />
                 <text>Mochila de Compras</text>
             </Top>
-            <Itens>
+            <Products>
 
-            </Itens>
+            </Products>
         </Container>
     )
 }
