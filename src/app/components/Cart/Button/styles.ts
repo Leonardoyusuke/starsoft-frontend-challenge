@@ -1,9 +1,9 @@
 'use client'
 
 import styled from "styled-components"
+import { IPercentageProps } from "@/lib/types/product"
 
 export const BoxButton = styled.div`
-    left: 42%;
     width: 403;
     height: 107;
     gap: 11px;
@@ -38,9 +38,10 @@ export const Line = styled.div`
     background-color: #393939;
 `
 
-export const Percentage = styled.div`
+export const Percentage = styled.div<IPercentageProps>`
     border-radius: 8px;
     height: 10px;
-    width: 100%;
+    width: ${props => props.percent}%;
+    max-width: 100%;
     background-color: #FF8310;
 `

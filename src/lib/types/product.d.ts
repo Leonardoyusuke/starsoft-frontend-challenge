@@ -23,6 +23,27 @@ export interface IMetadata {
 }
 
 export interface IProductsResponse {
+    pages: any;
     data: IProduct[];
     metadata: IMetadata;
-} 
+}
+
+export interface IProductsProps {
+    data: IProductsResponse | undefined;
+    isLoading: boolean;
+    error: unknown;
+    visibleCount: number;
+}
+
+export interface IProductsContainerProps {
+    visibleCount: number;
+}
+
+export interface IPercentageProps {
+    percent: number
+}
+
+export interface IInfiniteProducts {
+    pages: IProductsResponse[];
+    pageParams: number[];
+}
