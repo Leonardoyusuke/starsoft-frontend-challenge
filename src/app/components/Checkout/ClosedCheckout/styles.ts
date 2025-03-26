@@ -19,7 +19,7 @@ img{
     width: 33px;
     height: 33px;
 }
-text{
+p{
     width: 12px;
     height: 26px;
     font-family: 'IBM Plex Sans', sans-serif;

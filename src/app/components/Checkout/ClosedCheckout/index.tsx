@@ -13,7 +13,7 @@ export default function ClosedCheckout() {
     return (
         <BagWrapped onClick={()=>dispatch(openCheckout())} >
             <Image src={bag} alt={"bag"} />
-            <text>0</text>
+            <p>0</p>
         </BagWrapped>
     )
 }

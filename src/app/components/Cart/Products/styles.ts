@@ -3,6 +3,20 @@
 import Image from "next/image";
 import styled from "styled-components";
 
+
+export const Container = styled.div`
+    margin-top: 200px;
+    justify-self: center;
+    background-color: #232323;
+    height: 100%;
+    width: 1455px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    justify-items: center;
+    position: relative;
+`
+
 export const Product = styled.div`
     width: 345px;
     height: 555px;
@@ -10,17 +24,15 @@ export const Product = styled.div`
     position: relative;
     background-color: #191A20;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column; 
 `
 export const ProductImage = styled(Image)`
     margin: 24.5px;
     align-self: center;
     border-radius: 4px;
 `
-
-export const ProductName = styled.text`
-    width: 118px;
+export const ProductName = styled.p`
+    width: 158px;
     height: 25px;
     font-family: Poppins;
     font-weight: 500;
@@ -29,7 +41,7 @@ export const ProductName = styled.text`
     letter-spacing: 0%;
     color: #FFFFFF;
 `
-export const ProductDescription = styled.text`
+export const ProductDescription = styled.p`
     width: 296px;
     height: 12px;
     font-family: Poppins;
@@ -68,8 +80,7 @@ export const ProductPriceBuy = styled.div`
     display: flex;
     flex-direction: column;
     padding-top: 24px;
-    gap: 24px;
-    
+    gap: 24px;    
 `
 
 export const Button = styled.button`
@@ -83,7 +94,7 @@ export const Button = styled.button`
     padding-left: 26px;
     background: #FF8310;
     box-shadow: 0px 50px 100px -20px #32325D40;
-    text{
+    p{
         width: 81;
         height: 22;
         font-family: Poppins;
@@ -92,7 +103,5 @@ export const Button = styled.button`
         line-height: 140%;
         letter-spacing: 0%;
         color: #FFFFFF;
-
     }
-
 `

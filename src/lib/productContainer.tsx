@@ -2,7 +2,11 @@
 import Products from '@/app/components/Cart/Products';
 import { useData } from './api';
 
-export default function ProductsContainer() {
+interface ProductsContainerProps {
+  visibleCount: number;
+}
+
+export default function ProductsContainer({ visibleCount }: ProductsContainerProps) {
   const { data, isLoading, error } = useData();
 
   return (
@@ -10,6 +14,7 @@ export default function ProductsContainer() {
       data={data}
       isLoading={isLoading}
       error={error}
+      visibleCount={visibleCount}
     />
   );
 }
