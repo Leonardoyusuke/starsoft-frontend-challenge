@@ -12,7 +12,7 @@ export default function ClosedCheckout() {
 
     return (
         <BagWrapped onClick={()=>dispatch(openCheckout())} >
-            <Image src={bag} alt={"bag"} />
+            <Image src="bag.svg" width={33} height={33} alt={"bag"} />
             <p>0</p>
         </BagWrapped>
     )
