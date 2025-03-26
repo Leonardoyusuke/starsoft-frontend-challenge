@@ -1,5 +1,4 @@
 import Image from "next/image"
-import bag from "/public/bag.svg"
 import { BagWrapped } from "./styles"
 import { useDispatch } from 'react-redux';
 import { openCheckout } from "@/lib/features/checkout/checkoutSlice";
