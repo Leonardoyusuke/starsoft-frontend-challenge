@@ -11,28 +11,30 @@ export interface IProduct {
     image: string;
     price: number;
     createdAt: string;
-}
+  }
 
-export interface IMetadata {
+  export interface IMetadata {
     page: number;
     limit: number;
     count: number;
     pageCount: number;
     hasNextPage: boolean;
     hasPreviousPage: boolean;
-}
+  }
 
-export interface IProductsResponse {
+  export interface IProductsResponse {
     data: IProduct[];
     metadata: IMetadata;
-}
+    pages: IProductsResponse[];
+    pageParams: unknown[];
+  }
 
-export interface IProductsProps {
-    data: IProductsResponse | undefined;
+  export interface IProductsProps {
+    data: InfiniteData<IProductsResponse> | undefined;
     isLoading: boolean;
     error: unknown;
     visibleCount: number;
-}
+  }
 
 export interface IProductsContainerProps {
     visibleCount: number;
