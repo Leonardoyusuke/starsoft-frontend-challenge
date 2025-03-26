@@ -22,7 +22,7 @@ img{
     top: 60px;
     left: 40px;
 }
-text{
+p{
     position: absolute;
     width: 253px;
     height: 26px;

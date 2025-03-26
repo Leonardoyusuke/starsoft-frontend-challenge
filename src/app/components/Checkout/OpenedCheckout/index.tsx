@@ -12,7 +12,7 @@ export default function OpenedCheckout() {
         <Container>
             <Top>
                 <Image src={backArrow} alt={"BackArrow"} onClick={() => dispatch(closeCheckout())} />
-                <text>Mochila de Compras</text>
+                <p>Mochila de Compras</p>
             </Top>
             <Products>
 

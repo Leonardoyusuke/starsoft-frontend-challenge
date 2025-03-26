@@ -23,7 +23,6 @@ export interface IMetadata {
 }
 
 export interface IProductsResponse {
-    pages: any;
     data: IProduct[];
     metadata: IMetadata;
 }
