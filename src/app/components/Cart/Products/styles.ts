@@ -72,7 +72,7 @@ export const ProductPrice = styled.div`
     margin-top: 10px;
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row;
 `
 

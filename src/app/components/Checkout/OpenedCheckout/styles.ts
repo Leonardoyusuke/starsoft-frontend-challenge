@@ -2,16 +2,25 @@
 
 import styled from "styled-components"
 
-export const Container = styled.div`
-position: absolute;
-right: 0px;
-top: 0px;
-width: 679px;
-height: 1117px;
-border-radius: 5px;
-background-color: gray;
-z-index: 1;
-`
+interface ContainerProps {
+    $isOpen: boolean;
+  }
+  
+  export const Container = styled.div<ContainerProps>`
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 679px;
+    height: 1117px;
+    border-radius: 5px;
+    background-color: #232323;
+    z-index: 1;
+  
+    transition: transform 300ms ease-out, opacity 300ms ease-out;
+    transform: ${({ $isOpen }) => ($isOpen ? 'translateX(0)' : 'translateX(100%)')};
+    opacity: ${({ $isOpen }) => ($isOpen ? 1 : 0)};
+    pointer-events: ${({ $isOpen }) => ($isOpen ? 'auto' : 'none')};
+  `;
 
 export const Top = styled.div`
 position: relative;
@@ -35,6 +44,4 @@ p{
     letter-spacing: 0;
     color: #FFFFFF;
 }
-`
-export const Products = styled.div`
 `
