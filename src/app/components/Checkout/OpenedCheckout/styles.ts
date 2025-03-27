@@ -8,7 +8,8 @@ export const MotionContainer = styled(motion.div)`
   width: 679px;
   height: 1117px;
   border-radius: 5px;
-  background-color: gray;
+  background-color: #232323;
+  ;
   z-index: 1;
 `;
 

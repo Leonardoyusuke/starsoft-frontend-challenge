@@ -4,7 +4,6 @@ import { IProductsResponse } from '@/lib/types/product';
 
 async function fetchProducts({ pageParam }: QueryFunctionContext<[string], number>): Promise<IProductsResponse> {
   const page = pageParam ;
-  console.log(page)
   const res = await fetch(`https://starsoft-challenge-7dfd4a56a575.herokuapp.com/v1/products?page=${page}&limit=12`);
   if (!res.ok) {
     throw new Error('Error in fetch data');

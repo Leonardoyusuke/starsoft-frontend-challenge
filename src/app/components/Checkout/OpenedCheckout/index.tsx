@@ -7,11 +7,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { closeCheckout } from "@/lib/features/checkout/checkoutSlice";
 import { AppDispatch, RootState } from '@/lib/store';
 import { AnimatePresence } from "framer-motion";
+import ProductCheckout from "./ProductCheckout";
 
 export default function OpenedCheckout() {
   const dispatch = useDispatch<AppDispatch>();
   const isOpen = useSelector((state: RootState) => state.checkout.isOpen);
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -29,6 +29,7 @@ export default function OpenedCheckout() {
             />
             <p>Mochila de Compras</p>
           </Top>
+          <ProductCheckout/>
         </MotionContainer>
       )}
     </AnimatePresence>

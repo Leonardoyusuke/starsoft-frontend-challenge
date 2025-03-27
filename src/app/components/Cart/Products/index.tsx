@@ -13,8 +13,12 @@ import {
   Container
 } from './styles';
 import Eth from '/public/Eth.svg';
+import { AppDispatch } from '@/lib/store';
+import { useDispatch } from 'react-redux';
+import { addItem } from '@/lib/features/cart/cartSlice';
 
 export default function Products({ data, isLoading, error, visibleCount }: IProductsProps) {
+  const dispatch = useDispatch<AppDispatch>();
   if (isLoading) return <p>Carregando Produtos...</p>;
   if (error instanceof Error) return <p>Erro: {error.message}</p>;
 
@@ -37,7 +41,9 @@ export default function Products({ data, isLoading, error, visibleCount }: IProd
               <ProductPrice>
                 <Image src={Eth} alt="eth" width={24} height={24} /> {product.price} ETH
               </ProductPrice>
-              <Button><p>Comprar</p></Button>
+              <Button onClick={() => dispatch(addItem({ ...product, quantity: 1 }))}>
+                <p>Comprar</p>
+              </Button>
             </ProductPriceBuy>
           </ProductBottom>
         </Product>
