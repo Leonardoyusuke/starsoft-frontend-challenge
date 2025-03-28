@@ -51,7 +51,7 @@ export const H2 = styled.h2`
   height: auto;
   font-family: Poppins;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 12px;
   letter-spacing: 0px;
   color: #cccccc;
