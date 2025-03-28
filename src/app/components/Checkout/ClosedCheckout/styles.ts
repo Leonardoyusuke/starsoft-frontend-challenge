@@ -5,10 +5,7 @@ import styled from 'styled-components';
 export const BagWrapped = styled.div`
   position: absolute;
   top: 23.5px;
-  width: 74px;
-  height: 53px;
   right: 63px;
-  gap: 10px;
   width: 54px;
   height: 33px;
   display: flex;

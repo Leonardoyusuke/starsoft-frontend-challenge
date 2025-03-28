@@ -16,9 +16,11 @@ import Eth from '/public/Eth.svg';
 import { AppDispatch } from '@/lib/store';
 import { useDispatch } from 'react-redux';
 import { addItem } from '@/lib/features/cart/cartSlice';
+import { useState } from 'react';
 
 export default function Products({ data, isLoading, error, visibleCount }: IProductsProps) {
   const dispatch = useDispatch<AppDispatch>();
+  const [addedProducts, setAddedProducts] = useState<number[]>([]);
   if (isLoading) return <p>Carregando Produtos...</p>;
   if (error instanceof Error) return <p>Erro: {error.message}</p>;
 
@@ -36,8 +38,14 @@ export default function Products({ data, isLoading, error, visibleCount }: IProd
               <ProductPrice>
                 <Image src={Eth} alt="eth" width={24} height={24} /> {product.price} ETH
               </ProductPrice>
-              <Button onClick={() => dispatch(addItem({ ...product, quantity: 1 }))}>
-                <p>Comprar</p>
+              <Button
+                onClick={() => {
+                  dispatch(addItem({ ...product, quantity: 1 }));
+                  setAddedProducts((prev) => [...prev, product.id]);
+                }}
+                disabled={addedProducts.includes(product.id)}
+              >
+                <p>{addedProducts.includes(product.id) ? 'ADICIONADO AO CARRINHO' : 'Comprar'}</p>
               </Button>
             </ProductPriceBuy>
           </ProductBottom>
