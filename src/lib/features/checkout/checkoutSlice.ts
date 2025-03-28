@@ -1,28 +1,28 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 interface CheckoutState {
-    isOpen: boolean;
-};
+  isOpen: boolean;
+}
 
 const initialState: CheckoutState = {
-    isOpen: false,
+  isOpen: false,
 };
 
 const checkoutSlice = createSlice({
-    name:'checkout',
-    initialState,
-    reducers:{
-        openCheckout(state){
-            state.isOpen = true;
-        },
-        closeCheckout(state){
-            state.isOpen = false;
-        },
-        toggleCheckout(state){
-            state.isOpen = !state.isOpen
-        },
+  name: 'checkout',
+  initialState,
+  reducers: {
+    openCheckout(state) {
+      state.isOpen = true;
     },
+    closeCheckout(state) {
+      state.isOpen = false;
+    },
+    toggleCheckout(state) {
+      state.isOpen = !state.isOpen;
+    },
+  },
 });
 
-export const { openCheckout, closeCheckout, toggleCheckout} = checkoutSlice.actions
-export default checkoutSlice.reducer
+export const { openCheckout, closeCheckout, toggleCheckout } = checkoutSlice.actions;
+export default checkoutSlice.reducer;

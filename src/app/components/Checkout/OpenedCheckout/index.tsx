@@ -1,13 +1,13 @@
-'use client'
+'use client';
 
-import { Top, MotionContainer } from "./styles";
-import Image from "next/image";
-import backArrow from "/public/BackArrow.svg";
-import { useDispatch, useSelector } from "react-redux";
-import { closeCheckout } from "@/lib/features/checkout/checkoutSlice";
+import { Top, MotionContainer } from './styles';
+import Image from 'next/image';
+import backArrow from '/public/BackArrow.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import { closeCheckout } from '@/lib/features/checkout/checkoutSlice';
 import { AppDispatch, RootState } from '@/lib/store';
-import { AnimatePresence } from "framer-motion";
-import ProductCheckout from "./ProductCheckout";
+import { AnimatePresence } from 'framer-motion';
+import ProductCheckout from './ProductCheckout';
 
 export default function OpenedCheckout() {
   const dispatch = useDispatch<AppDispatch>();
@@ -19,17 +19,13 @@ export default function OpenedCheckout() {
           initial={{ x: '100%', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: '100%', opacity: 0 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
         >
           <Top>
-            <Image
-              src={backArrow}
-              alt="BackArrow"
-              onClick={() => dispatch(closeCheckout())}
-            />
+            <Image src={backArrow} alt="BackArrow" onClick={() => dispatch(closeCheckout())} />
             <p>Mochila de Compras</p>
           </Top>
-          <ProductCheckout/>
+          <ProductCheckout />
         </MotionContainer>
       )}
     </AnimatePresence>

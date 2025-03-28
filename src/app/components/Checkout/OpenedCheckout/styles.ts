@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const MotionContainer = styled(motion.div)`
   position: absolute;
@@ -9,7 +9,6 @@ export const MotionContainer = styled(motion.div)`
   height: 1117px;
   border-radius: 5px;
   background-color: #232323;
-  ;
   z-index: 1;
 `;
 
@@ -35,6 +34,6 @@ export const Top = styled.div`
     font-weight: 500;
     font-size: 24px;
     line-height: 110%;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 `;

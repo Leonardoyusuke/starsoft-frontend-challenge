@@ -10,7 +10,7 @@ import {
   ProductPrice,
   ProductPriceBuy,
   Button,
-  Container
+  Container,
 } from './styles';
 import Eth from '/public/Eth.svg';
 import { AppDispatch } from '@/lib/store';
@@ -28,12 +28,7 @@ export default function Products({ data, isLoading, error, visibleCount }: IProd
     <Container>
       {products.slice(0, visibleCount).map((product: IProduct) => (
         <Product key={product.id}>
-          <ProductImage
-            src={product.image}
-            width={296}
-            height={258}
-            alt={product.name}
-          />
+          <ProductImage src={product.image} width={296} height={258} alt={product.name} />
           <ProductBottom>
             <ProductName>{product.name}</ProductName>
             <ProductDescription>{product.description}</ProductDescription>

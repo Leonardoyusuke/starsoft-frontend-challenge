@@ -1,14 +1,14 @@
 'use client';
-import { BoxButton, Line, Percentage, Button1 } from "./styles";
+import { BoxButton, Line, Percentage, Button1 } from './styles';
 import { MouseEventHandler, useEffect, useState } from 'react';
 
 interface ButtonProps {
   onClick: MouseEventHandler<HTMLButtonElement>;
-  percentage: number
+  percentage: number;
 }
 
 export default function Button({ percentage, onClick }: ButtonProps) {
-  const [allShowed, setAllShowed] = useState(false)
+  const [allShowed, setAllShowed] = useState(false);
 
   useEffect(() => {
     if (percentage === 100 && !allShowed) {

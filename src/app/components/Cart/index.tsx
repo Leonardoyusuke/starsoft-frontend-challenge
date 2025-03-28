@@ -15,7 +15,7 @@ export default function Cart() {
     if (products.length - visibleCount < 8 && hasNextPage) {
       fetchNextPage();
     }
-    setVisibleCount(prev => prev + 8);
+    setVisibleCount((prev) => prev + 8);
   };
 
   const totalProducts = data?.pages[data.pages.length - 1]?.metadata.count || 0;
@@ -23,12 +23,7 @@ export default function Cart() {
 
   return (
     <div>
-      <Products 
-        data={data}
-        isLoading={isLoading}
-        error={error}
-        visibleCount={visibleCount}
-      />
+      <Products data={data} isLoading={isLoading} error={error} visibleCount={visibleCount} />
       <Button onClick={handleShowMore} percentage={percentage}></Button>
     </div>
   );

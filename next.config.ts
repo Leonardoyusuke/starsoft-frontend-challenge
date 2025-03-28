@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   compiler: {
@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   },
   images: {
     domains: ['softstar.s3.amazonaws.com'],
-  }
-}
+  },
+};
 
 export default nextConfig;
