@@ -59,7 +59,7 @@ export default function ProductCheckout() {
           <h1>Total</h1>{' '}
           <div>
             <Image src={Eth} alt={'Eth'} />
-            {total.toFixed(2)} ETH
+            {total} ETH
           </div>
         </Total>
         <BuyButton
