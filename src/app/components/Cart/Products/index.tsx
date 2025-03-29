@@ -34,7 +34,7 @@ export default function Products({ data, isLoading, error, visibleCount }: IProd
       {products.slice(0, visibleCount).map((product: IProduct) => (
         <Product
           key={product.id}
-          onClick={() => router.push(`/pages/products/${getProductSlug(product)}`)}
+          onClick={() => router.push(`/products/${getProductSlug(product)}`)}
         >
           <ProductImage src={product.image} width={296} height={258} alt={product.name} />
           <ProductBottom>

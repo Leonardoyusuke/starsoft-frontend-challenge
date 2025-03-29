@@ -24,6 +24,9 @@ export const Product = styled.div`
   background-color: #191a20;
   display: flex;
   flex-direction: column;
+  :hover {
+    cursor: pointer;
+  }
 `;
 export const ProductImage = styled(Image)`
   margin: 24.5px;
@@ -92,6 +95,9 @@ export const Button = styled.button`
   padding-left: 26px;
   background: #ff8310;
   box-shadow: 0px 50px 100px -20px #32325d40;
+  :hover {
+    cursor: pointer;
+  }
   p {
     width: 81;
     height: 22;

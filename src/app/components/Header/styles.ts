@@ -13,4 +13,7 @@ export const LogoWrapper = styled.div`
   position: absolute;
   top: 33px;
   left: 41px;
+  :hover {
+    cursor: pointer;
+  }
 `;
