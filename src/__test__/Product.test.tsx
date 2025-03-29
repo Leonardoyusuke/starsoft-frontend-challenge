@@ -4,6 +4,12 @@ import { makeStore } from '@/lib/store';
 import Products from '@/app/components/Cart/Products';
 import { mockProduct, mockProducts } from './mockProduct';
 import React from 'react';
+import { getProductSlug } from '@/lib/utils/slug';
+jest.mock('next/navigation', () => ({
+  useRouter: () => ({
+    push: jest.fn(),
+  }),
+}));
 
 describe('Products', () => {
   it('should add product to checkout when "Comprar" is clicked', () => {
@@ -58,5 +64,25 @@ describe('Products', () => {
     fireEvent.click(screen.getByText('Carregar mais'));
 
     expect(screen.getAllByTestId('product-name')).toHaveLength(16);
+  });
+  it('should redirect to product page when product is clicked', () => {
+    const store = makeStore();
+    const push = jest.fn();
+    jest.mocked(require('next/navigation')).useRouter = () => ({ push });
+
+    render(
+      <Provider store={store}>
+        <Products
+          data={{ pages: [{ data: [mockProduct] }] }}
+          isLoading={false}
+          error={null}
+          visibleCount={1}
+        />
+      </Provider>
+    );
+    const productCard = screen.getByTestId('product-name').closest('div');
+    fireEvent.click(productCard!);
+
+    expect(push).toHaveBeenCalledWith(`/products/${getProductSlug(mockProduct)}`);
   });
 });
