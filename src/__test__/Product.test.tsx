@@ -5,10 +5,10 @@ import Products from '@/app/components/Cart/Products';
 import { mockProduct, mockProducts } from './mockProduct';
 import React from 'react';
 import { getProductSlug } from '@/lib/utils/slug';
+const push = jest.fn();
+
 jest.mock('next/navigation', () => ({
-  useRouter: () => ({
-    push: jest.fn(),
-  }),
+  useRouter: () => ({ push }),
 }));
 
 describe('Products', () => {
@@ -67,8 +67,6 @@ describe('Products', () => {
   });
   it('should redirect to product page when product is clicked', () => {
     const store = makeStore();
-    const push = jest.fn();
-    jest.mocked(require('next/navigation')).useRouter = () => ({ push });
 
     render(
       <Provider store={store}>
