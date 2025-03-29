@@ -1,12 +1,15 @@
+/* eslint-disable @next/next/no-img-element */
+
 import { render, screen, fireEvent } from '@testing-library/react';
 import ClosedCheckout from '@/app/components/Checkout/ClosedCheckout';
 import { Provider } from 'react-redux';
 import { makeStore } from '@/lib/store';
 import OpenedCheckout from '@/app/components/Checkout/OpenedCheckout';
+import type { ImgHTMLAttributes } from 'react';
 
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: (props: any) => {
+  default: (props: ImgHTMLAttributes<HTMLImageElement>) => {
     const { src, alt, onClick } = props;
     return <img src={src} alt={alt} onClick={onClick} />;
   },
@@ -57,8 +60,8 @@ describe('Checkout', () => {
     );
 
     fireEvent.mouseDown(document);
-
     const state = store.getState();
     expect(state.checkout.isOpen).toBe(false);
+    expect(container).toBeInTheDocument();
   });
 });
