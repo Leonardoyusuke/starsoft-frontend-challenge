@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 import { render, screen, fireEvent } from '@testing-library/react';
 import ClosedCheckout from '@/app/components/Checkout/ClosedCheckout';
 import { Provider } from 'react-redux';

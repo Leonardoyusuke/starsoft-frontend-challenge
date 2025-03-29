@@ -32,7 +32,7 @@ export default function Products({ data, isLoading, error, visibleCount }: IProd
         <Product key={product.id}>
           <ProductImage src={product.image} width={296} height={258} alt={product.name} />
           <ProductBottom>
-            <ProductName>{product.name}</ProductName>
+            <ProductName data-testid="product-name">{product.name}</ProductName>
             <ProductDescription>{product.description}</ProductDescription>
             <ProductPriceBuy>
               <ProductPrice>
