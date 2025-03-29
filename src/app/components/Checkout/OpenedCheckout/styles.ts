@@ -11,6 +11,7 @@ export const MotionContainer = styled(motion.div)`
   background-color: #232323;
   z-index: 1000;
   overflow-y: auto;
+  overflow-x: hidden;
   transition: width 0.3s ease;
 
   @media (max-width: 1024px) {

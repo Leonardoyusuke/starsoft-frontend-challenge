@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import ProductPage from './product';
-import { getProductSlug } from '@/lib/utils/slug';
 
 type PageProps = {
   params: Promise<{ slug: string }>;

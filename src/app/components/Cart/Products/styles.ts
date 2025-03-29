@@ -65,6 +65,8 @@ export const ProductName = styled.p`
 `;
 
 export const ProductDescription = styled.p`
+  margin-top: -10px;
+  margin-bottom: 10px;
   width: 296px;
   height: 12px;
   font-family: Poppins;
@@ -85,6 +87,8 @@ export const ProductBottom = styled.div`
 `;
 
 export const ProductPrice = styled.div`
+  margin-left: -5px;
+  margin-top: 10px;
   width: 124px;
   height: 29px;
   color: #f0f0f0;
