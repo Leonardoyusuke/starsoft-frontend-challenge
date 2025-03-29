@@ -46,8 +46,8 @@ export const Item = styled.div`
 
   img {
     border-radius: 8px;
-    width: 80px;
-    height: 80px;
+    width: 139px;
+    height: 139px;
   }
 
   @media (max-width: 768px) {
@@ -77,12 +77,16 @@ export const ItemPrice = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  height: 29px;
   font-family: Poppins;
   font-weight: 600;
   font-size: 20px;
   color: #f0f0f0;
+  img {
+    width: 30px;
+    height: 30px;
+  }
   @media (max-width: 768px) {
-    margin-top: 20px;
     img {
       width: 30px;
       height: 30px;
@@ -92,12 +96,14 @@ export const ItemPrice = styled.div`
 
 export const ItemInfo = styled.div`
   width: 367px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 
   @media (max-width: 768px) {
     width: 100%;
+    height: 160px;
   }
 `;
 
@@ -119,9 +125,6 @@ export const BoxQuantity = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  @media (max-width: 768px) {
-    margin-top: 20px;
-  }
 `;
 
 export const Button = styled.button`
@@ -141,10 +144,14 @@ export const Delet = styled.button`
   border: none;
   color: white;
   cursor: pointer;
+  img {
+    width: 43px;
+    height: 43px;
+  }
   @media (max-width: 768px) {
     margin-top: -40px;
-    width: auto;
-    height: auto;
+    width: 43px;
+    height: 43px;
   }
 `;
 
