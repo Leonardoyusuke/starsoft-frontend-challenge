@@ -2,7 +2,7 @@
 
 import styled from 'styled-components';
 
-export const BagWrapped = styled.div`
+export const BagWrapped = styled.div.attrs({ role: 'button' })`
   position: absolute;
   top: 23.5px;
   right: 63px;
@@ -12,6 +12,7 @@ export const BagWrapped = styled.div`
   padding: 10px;
   align-items: flex-end;
   gap: 9px;
+  cursor: pointer;
   img {
     width: 33px;
     height: 33px;

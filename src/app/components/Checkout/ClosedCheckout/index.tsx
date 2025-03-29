@@ -4,7 +4,7 @@ import { BagWrapped } from './styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { openCheckout } from '@/lib/features/checkout/checkoutSlice';
 import { RootState, AppDispatch } from '@/lib/store';
-import { Bag } from './Bag';
+import Bag from './Bag';
 
 export default function ClosedCheckout() {
   const dispatch = useDispatch<AppDispatch>();

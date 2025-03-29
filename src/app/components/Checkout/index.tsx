@@ -8,7 +8,6 @@ import { AnimatePresence } from 'framer-motion';
 
 const OpenedCheckout = dynamic(() => import('./OpenedCheckout'), {
   ssr: false,
-  loading: () => <p>Carregando carrinho...</p>,
 });
 
 export default function CheckOut() {
