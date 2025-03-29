@@ -17,8 +17,11 @@ import { AppDispatch } from '@/lib/store';
 import { useDispatch } from 'react-redux';
 import { addItem } from '@/lib/features/cart/cartSlice';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { getProductSlug } from '@/lib/utils/slug';
 
 export default function Products({ data, isLoading, error, visibleCount }: IProductsProps) {
+  const router = useRouter();
   const dispatch = useDispatch<AppDispatch>();
   const [addedProducts, setAddedProducts] = useState<number[]>([]);
   if (isLoading) return <p>Carregando Produtos...</p>;
@@ -29,7 +32,10 @@ export default function Products({ data, isLoading, error, visibleCount }: IProd
   return (
     <Container>
       {products.slice(0, visibleCount).map((product: IProduct) => (
-        <Product key={product.id}>
+        <Product
+          key={product.id}
+          onClick={() => router.push(`/pages/products/${getProductSlug(product)}`)}
+        >
           <ProductImage src={product.image} width={296} height={258} alt={product.name} />
           <ProductBottom>
             <ProductName data-testid="product-name">{product.name}</ProductName>
@@ -39,7 +45,8 @@ export default function Products({ data, isLoading, error, visibleCount }: IProd
                 <Image src={Eth} alt="eth" width={24} height={24} /> {product.price} ETH
               </ProductPrice>
               <Button
-                onClick={() => {
+                onClick={(e) => {
+                  e.stopPropagation();
                   dispatch(addItem({ ...product, quantity: 1 }));
                   setAddedProducts((prev) => [...prev, product.id]);
                 }}
