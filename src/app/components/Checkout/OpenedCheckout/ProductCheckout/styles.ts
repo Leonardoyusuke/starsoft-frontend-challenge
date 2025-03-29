@@ -6,13 +6,18 @@ export const BoxItem = styled.div`
   width: 619px;
   height: 200px;
   border-radius: 8px;
+
+  @media (max-width: 768px) {
+    height: auto;
+    width: 100%;
+  }
 `;
 
 export const ItemsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0px 30px 0px 30px;
+  padding: 0 30px;
   position: absolute;
   top: 288px;
   width: 620px;
@@ -20,6 +25,13 @@ export const ItemsContainer = styled.div`
   border-radius: 5px;
   z-index: 10;
   gap: 24px;
+
+  @media (max-width: 768px) {
+    padding: 0px;
+    width: 100%;
+    position: static;
+    margin-top: 150px;
+  }
 `;
 
 export const Item = styled.div`
@@ -27,55 +39,66 @@ export const Item = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 17px 30px 17px 30px;
+  padding: 17px 30px;
   height: 161px;
   border-radius: 8px;
   gap: 10px;
+
   img {
     border-radius: 8px;
+    width: 80px;
+    height: 80px;
+  }
+
+  @media (max-width: 768px) {
+    align-items: flex-start;
+    height: auto;
+    gap: 12px;
   }
 `;
 
 export const H1 = styled.h1`
-  width: auto;
-  height: 25px;
   font-family: Poppins;
   font-weight: 500;
   font-size: 18px;
   line-height: 140%;
-  letter-spacing: 0%;
   color: #ffffff;
 `;
+
 export const H2 = styled.h2`
-  width: auto;
-  height: auto;
   font-family: Poppins;
   font-weight: 300;
   font-size: 11px;
   line-height: 12px;
-  letter-spacing: 0px;
   color: #cccccc;
 `;
+
 export const ItemPrice = styled.div`
   display: flex;
   align-items: center;
-  width: auto;
-  height: 29px;
   gap: 10px;
   font-family: Poppins;
   font-weight: 600;
   font-size: 20px;
-  line-height: 110.00000000000001%;
-  letter-spacing: 0%;
   color: #f0f0f0;
+  @media (max-width: 768px) {
+    margin-top: 20px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
 `;
 
 export const ItemInfo = styled.div`
   width: 367px;
-  height: 160px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const QuantityControls = styled.div`
@@ -86,15 +109,19 @@ export const QuantityControls = styled.div`
   align-items: center;
   border-radius: 8px;
   background-color: #232323;
+
   p {
     color: #ffffff;
   }
 `;
 
 export const BoxQuantity = styled.div`
-  width: 105%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
 `;
 
 export const Button = styled.button`
@@ -109,62 +136,67 @@ export const Button = styled.button`
 
 export const Delet = styled.button`
   border-radius: 100%;
-  padding: 0px;
+  padding: 0;
   background: #ff8310;
   border: none;
   color: white;
   cursor: pointer;
+  @media (max-width: 768px) {
+    margin-top: -40px;
+    width: auto;
+    height: auto;
+  }
 `;
+
 export const Total = styled.div`
   width: 579px;
-  height: 34px;
   display: flex;
   margin: auto;
   align-items: center;
-  justify-content: flex-end;
-  gap: 340px;
+  justify-content: space-between;
+  gap: 24px;
+
   h1 {
-    width: 73px;
-    height: 26px;
     font-family: Poppins;
     font-weight: 700;
     font-size: 24px;
-    line-height: 26px;
-    letter-spacing: -1px;
-    text-transform: uppercase;
     color: #ffffff;
   }
+
   div {
-    gap: 10px;
     display: flex;
     align-items: center;
+    gap: 10px;
     font-family: Poppins;
     font-weight: 600;
     font-size: 24px;
-    line-height: 110.00000000000001%;
-    letter-spacing: 0%;
     color: #f0f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    align-items: flex-end;
+    gap: 8px;
   }
 `;
 
 export const BuyButton = styled.button`
   width: 620px;
   height: 81px;
-  gap: 10px;
   border-radius: 8px;
-  padding-top: 10px;
-  padding-right: 26px;
-  padding-bottom: 10px;
-  padding-left: 26px;
+  padding: 10px 26px;
   background-color: #ff8310;
+
   p {
     font-family: Lato;
     font-weight: 700;
     font-size: 16px;
-    line-height: 140%;
-    letter-spacing: 0%;
-    width: 155;
-    height: 22;
     color: #ffffff;
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+    margin-left: 5%;
+    width: 90%;
   }
 `;

@@ -11,10 +11,21 @@ export const MotionContainer = styled(motion.div)`
   background-color: #232323;
   z-index: 1000;
   overflow-y: auto;
+  transition: width 0.3s ease;
+
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    border-radius: 0;
+  }
 `;
 
 export const Top = styled.div`
   position: relative;
+
   img {
     position: absolute;
     width: 60px;
@@ -22,6 +33,13 @@ export const Top = styled.div`
     top: 60px;
     left: 40px;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+      width: 40px;
+      height: 40px;
+      top: 40px;
+      left: 20px;
+    }
   }
 
   p {
@@ -35,5 +53,14 @@ export const Top = styled.div`
     font-size: 24px;
     line-height: 110%;
     color: #ffffff;
+
+    @media (max-width: 768px) {
+      top: 60px;
+      right: 50%;
+      transform: translateX(50%);
+      font-size: 20px;
+      width: auto;
+      text-align: center;
+    }
   }
 `;
