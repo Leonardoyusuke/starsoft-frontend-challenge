@@ -80,6 +80,7 @@ export const ProductBottom = styled.div`
   width: 100%;
   max-width: 345px;
   height: 196px;
+  min-height: 196px;
   gap: 19px;
   display: flex;
   flex-direction: column;

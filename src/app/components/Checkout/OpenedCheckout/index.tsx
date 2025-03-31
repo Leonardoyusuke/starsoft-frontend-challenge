@@ -35,7 +35,7 @@ export default function OpenedCheckout() {
       transition={{ duration: 0.3, ease: 'easeOut' }}
     >
       <Top>
-        <Image src={backArrow} alt="BackArrow" onClick={() => dispatch(closeCheckout())} />
+        <Image src={backArrow} alt="BackArrow" onClick={() => dispatch(closeCheckout())} priority />
         <p>Mochila de Compras</p>
       </Top>
       <ProductCheckout />

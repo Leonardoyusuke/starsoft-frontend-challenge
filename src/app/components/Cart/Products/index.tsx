@@ -36,13 +36,13 @@ export default function Products({ data, isLoading, error, visibleCount }: IProd
           key={product.id}
           onClick={() => router.push(`/products/${getProductSlug(product)}`)}
         >
-          <ProductImage src={product.image} width={296} height={258} alt={product.name} />
+          <ProductImage src={product.image} width={296} height={258} alt={product.name} priority />
           <ProductBottom>
             <ProductName data-testid="product-name">{product.name}</ProductName>
             <ProductDescription>{product.description}</ProductDescription>
             <ProductPriceBuy>
               <ProductPrice>
-                <Image src={Eth} alt="eth" width={24} height={24} /> {product.price} ETH
+                <Image src={Eth} alt="eth" width={24} height={24} priority /> {product.price} ETH
               </ProductPrice>
               <Button
                 onClick={(e) => {
