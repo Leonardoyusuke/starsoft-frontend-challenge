@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧪 Teste para Desenvolvedor(a) Front-End Next.js
 
-## Getting Started
+Bem-vindo(a)! Este repositório contém a solução do teste técnico para a vaga de Desenvolvedor(a) Front-End, com foco em **Next.js**, **React**, **Redux Toolkit**, **React Query**, animações com **Framer Motion**, e ambiente Dockerizado. O desafio propõe a construção de um marketplace de NFTs com funcionalidades de carrinho de compras.
 
-First, run the development server:
+---
+
+## 🚀 Como rodar o projeto
+
+### ✅ Pré-requisitos
+
+- Docker e Docker Compose instalados
+  - [Instalar Docker](https://docs.docker.com/get-docker/)
+  - [Instalar Docker Compose](https://docs.docker.com/compose/)
+
+---
+
+### 🐳 Rodando com Docker
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone o repositório
+git clone https://github.com/Leonardoyusuke/starsoft-frontend-challenge.git
+cd starsoft-frontend-challenge
+
+# Rode a aplicação
+docker-compose up
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse a aplicação em: [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 💻 Rodando localmente (sem Docker)
 
-## Learn More
+```bash
+# Instale as dependências
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Rode o servidor de desenvolvimento
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Funcionalidades implementadas
 
-## Deploy on Vercel
+- 🖼️ Listagem de NFTs com dados reais da API
+- 🔍 Página de detalhes de cada NFT com rotas dinâmicas
+- 🛒 Carrinho de compras com gerenciamento global via Redux Toolkit
+- 🔄 Consumo de API com React Query e uso de getStaticProps / getServerSideProps
+- 📱 Layout responsivo baseado no design fornecido no Figma
+- 💅 Estilização com Styled Components
+- 🎬 Animações com Framer Motion (transições de página, hover em cards, etc.)
+- ⚙️ Configuração completa com Docker e Docker Compose
+- 🧪 Testes unitários e de integração com Jest + React Testing Library
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧠 Tecnologias utilizadas e justificativas
+
+| Tecnologia            | Justificativa                                           |
+| --------------------- | ------------------------------------------------------- |
+| **Next.js**           | Framework robusto com SSR, SSG e rotas dinâmicas        |
+| **React**             | Biblioteca declarativa e eficiente para UI              |
+| **Redux Toolkit**     | Simplificação da gestão de estado global                |
+| **React Query**       | Controle de dados assíncronos com cache e revalidação   |
+| **Styled Components** | Estilo com escopo por componente, sem conflitos globais |
+| **Framer Motion**     | Animações modernas e fluídas com ótima DX               |
+| **Jest + RTL**        | Testes confiáveis de componentes e lógicas              |
+| **Docker**            | Setup unificado do ambiente de desenvolvimento          |
+
+---
+
+## 🧪 Testes
+
+Os testes foram implementados com **Jest** e **React Testing Library**, cobrindo funcionalidades principais como:
+
+- Adição de itens no carrinho
+- Renderização de componentes principais
+- Interações básicas com a interface
+
+Para rodar os testes:
+
+```bash
+npm run test
+```
+
+---
+
+## 🧑‍💻 Autor
+
+Desenvolvido por **Leonardo Yusuke Hirano**  
+🔗 [github.com/leonardoyusuke](https://github.com/leonardoyusuke)
+
+---
+
+## ✅ Entrega
+
+Repositório disponível publicamente em:  
+🔗 [https://github.com/Leonardoyusuke/starsoft-frontend-challenge](https://github.com/Leonardoyusuke/starsoft-frontend-challenge)
+
+Todo o histórico de commits reflete o andamento real do desenvolvimento, com mensagens claras e significativas.
+
+---
