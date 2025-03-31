@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { IProduct } from '@/lib/types/product';
-import { useInfiniteData } from '@/lib/api';
+import { useInfiniteData } from '@/lib/hooks';
 import { getProductSlug } from '@/lib/utils/slug';
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';

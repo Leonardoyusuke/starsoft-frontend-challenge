@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Products from '@/app/components/Cart/Products';
-import { useInfiniteData } from '@/lib/api';
+import { useInfiniteData } from '@/lib/hooks';
 import { IProduct, IProductsResponse } from '@/lib/types/product';
 import Button from './Button';
 
