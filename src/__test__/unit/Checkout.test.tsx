@@ -3,7 +3,7 @@ import ClosedCheckout from '@/app/components/Checkout/ClosedCheckout';
 import { Provider } from 'react-redux';
 import { makeStore } from '@/lib/store';
 import OpenedCheckout from '@/app/components/Checkout/OpenedCheckout';
-import { mockProduct } from './mockProduct';
+import { mockProduct } from '../mockProduct';
 import { addItem } from '@/lib/features/cart/cartSlice';
 import ProductCheckout from '@/app/components/Checkout/OpenedCheckout/ProductCheckout';
 

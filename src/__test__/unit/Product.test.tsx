@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { makeStore } from '@/lib/store';
 import Products from '@/app/components/Cart/Products';
-import { mockProduct, mockProducts } from './mockProduct';
+import { mockProduct, mockProducts } from '../mockProduct';
 import React from 'react';
 import { getProductSlug } from '@/lib/utils/slug';
 const push = jest.fn();

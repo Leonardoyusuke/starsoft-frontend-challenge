@@ -4,8 +4,8 @@ import { GlobalStyle } from './GlobalStyle';
 import { Poppins } from 'next/font/google';
 
 export const metadata: Metadata = {
-  title: 'Starsoft',
-  description: '',
+  title: 'Starsoft | Marketplace de NFT',
+  description: 'Seu Marketplace de NFT',
 };
 const poppins = Poppins({
   subsets: ['latin'],
